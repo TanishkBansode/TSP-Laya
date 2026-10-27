@@ -1,0 +1,201 @@
+{
+  "encoder": "answerdotai/ModernBERT-large",
+  "head_layers": 2,
+  "max_len": 512,
+  "head_max_len": 192,
+  "max_prefixes": 6,
+  "act_costs": {
+    "escalate": 0.5
+  },
+  "cost_wrong_act": 3.0,
+  "amp_dtype": "bf16",
+  "model_name": "rl-agent",
+  "temperature": [
+    1.1809571981430054,
+    1.0,
+    1.0
+  ],
+  "training": {
+    "updates": 7313,
+    "epochs_completed": 1,
+    "hours": 1.96,
+    "world_size": 1,
+    "fine_tuned_from_checkpoint": true,
+    "laya_train": {
+      "epochs": 2,
+      "micro_batch": 8,
+      "grad_accum": 8,
+      "encoder_lr": 2e-06,
+      "head_lr": 5e-05,
+      "min_lr": 1e-06,
+      "weight_decay": 0.01,
+      "grad_clip": 1.0,
+      "loss": "rlcd",
+      "rl_samples": 4,
+      "sigma_start": 0.4,
+      "sigma_end": 0.1,
+      "w_sph": 0.75,
+      "w_rps": 1.0,
+      "shuffle_options": [
+        "choice"
+      ],
+      "option_layout": null,
+      "freeze_encoder": false,
+      "calib_max": 400,
+      "calib_frac": 0.1,
+      "calib_seed": 20260922,
+      "seed": 0,
+      "max_len": null,
+      "head_max_len": null,
+      "amp": null,
+      "gradient_checkpointing": null,
+      "log_every": 100,
+      "label_smoothing": 0.05,
+      "text_column": "text",
+      "label_column": "label",
+      "question_id": "label",
+      "instructions": null,
+      "eval_data": "/kaggle/input/datasets/bansodetanishk/tsp-lays/data/laya_valid.jsonl",
+      "target_error": 0.1,
+      "min_abstain_n": 10
+    },
+    "laya_train_calibration": {
+      "choice": {
+        "items": 400,
+        "temperature": 1.1809571981430054,
+        "issues": [],
+        "accuracy": 0.83,
+        "mean_confidence": 0.8219437537357708
+      },
+      "score": {
+        "items": 0,
+        "temperature": 1.0,
+        "issues": []
+      },
+      "noul": {
+        "items": 0,
+        "temperature": 1.0,
+        "issues": []
+      }
+    },
+    "train_report": {
+      "eval_source": "/kaggle/input/datasets/bansodetanishk/tsp-lays/data/laya_valid.jsonl",
+      "eval_mode": "held_out",
+      "is_held_out": true,
+      "eval_items": 5222,
+      "note": "Metrics reflect independent held-out evaluation.",
+      "before": {
+        "items": 5222,
+        "loss": 0.5713,
+        "accuracy": 0.8493,
+        "mean_confidence": 0.9185,
+        "ece": 0.0696,
+        "brier": 0.2507,
+        "brier_top1": 0.1161,
+        "by_type": {
+          "choice": {
+            "items": 5222,
+            "loss": 0.5713,
+            "accuracy": 0.8493,
+            "mean_confidence": 0.9185,
+            "ece": 0.0696,
+            "brier": 0.2507,
+            "brier_top1": 0.1161
+          }
+        }
+      },
+      "after": {
+        "items": 5222,
+        "loss": 0.4779,
+        "accuracy": 0.855,
+        "mean_confidence": 0.825,
+        "ece": 0.0535,
+        "brier": 0.2141,
+        "brier_top1": 0.0945,
+        "by_type": {
+          "choice": {
+            "items": 5222,
+            "loss": 0.4779,
+            "accuracy": 0.855,
+            "mean_confidence": 0.825,
+            "ece": 0.0535,
+            "brier": 0.2141,
+            "brier_top1": 0.0945
+          }
+        }
+      },
+      "comparison": {
+        "delta_accuracy": 0.0057,
+        "delta_loss": -0.0934,
+        "delta_ece": -0.0161,
+        "delta_brier": -0.0366,
+        "delta_brier_top1": -0.0216,
+        "delta_mean_confidence": -0.0935
+      },
+      "calibration": {
+        "choice": {
+          "items": 400,
+          "temperature": 1.1809571981430054,
+          "issues": [],
+          "accuracy": 0.83,
+          "mean_confidence": 0.8219437537357708
+        },
+        "score": {
+          "items": 0,
+          "temperature": 1.0,
+          "issues": []
+        },
+        "noul": {
+          "items": 0,
+          "temperature": 1.0,
+          "issues": []
+        }
+      },
+      "abstention_thresholds": {
+        "choice:6-10": 0.6388
+      },
+      "training": {
+        "epochs": 2,
+        "micro_batch": 8,
+        "grad_accum": 8,
+        "encoder_lr": 2e-06,
+        "head_lr": 5e-05,
+        "min_lr": 1e-06,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "loss": "rlcd",
+        "rl_samples": 4,
+        "sigma_start": 0.4,
+        "sigma_end": 0.1,
+        "w_sph": 0.75,
+        "w_rps": 1.0,
+        "shuffle_options": [
+          "choice"
+        ],
+        "option_layout": null,
+        "freeze_encoder": false,
+        "calib_max": 400,
+        "calib_frac": 0.1,
+        "calib_seed": 20260922,
+        "seed": 0,
+        "max_len": null,
+        "head_max_len": null,
+        "amp": null,
+        "gradient_checkpointing": null,
+        "log_every": 100,
+        "label_smoothing": 0.05,
+        "text_column": "text",
+        "label_column": "label",
+        "question_id": "label",
+        "instructions": null,
+        "eval_data": "/kaggle/input/datasets/bansodetanishk/tsp-lays/data/laya_valid.jsonl",
+        "target_error": 0.1,
+        "min_abstain_n": 10
+      }
+    },
+    "abstention_thresholds": {
+      "choice:6-10": 0.6388
+    }
+  },
+  "fine_tuned": true
+}

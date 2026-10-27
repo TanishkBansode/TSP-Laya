@@ -1,0 +1,57 @@
+# Python & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environments
+.venv/
+model/.venv/
+env/
+venv/
+ENV/
+
+# Large Model Weights & Checkpoints (>100MB)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+model/laya_tsp_model/checkpoint_*/
+model/laya_tsp_model/model.safetensors
+
+# Large Datasets & JSONL files (>50MB)
+data/*.jsonl
+data/tsp_dataset_1000.json
+
+# Binaries & Compiled Executables
+bin/
+*.exe
+*.o
+*.a
+
+# Simulator (local experimental UI)
+simulator/
+
+# Scratch & Intermediate benchmark runs
+base_laya_results_batch50.json
+benchmark_base_laya.py
+
+# macOS & Editor artifacts
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.idea/
+.vscode/
+
+# Logs & temp files
+*.log
+*.tmp
+*.zip
+*.tar.gz
+/tmp/

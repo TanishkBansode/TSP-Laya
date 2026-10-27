@@ -1,0 +1,16 @@
+{
+  "next_city": {
+    "type": "choice",
+    "instructions": "Select the globally optimal candidate slot to extend the TSP tour:",
+    "criteria": {
+      "slot_0": "rank:1 ndist:0.24 cos:0.73 dist:0.015 ctr:0.245 lookahead:0.031 depot:0.692",
+      "slot_1": "rank:7 ndist:1.34 cos:0.88 dist:0.085 ctr:0.188 lookahead:0.019 depot:0.659",
+      "slot_2": "rank:2 ndist:0.31 cos:0.13 dist:0.020 ctr:0.274 lookahead:0.031 depot:0.723",
+      "slot_3": "rank:4 ndist:1.17 cos:0.52 dist:0.074 ctr:0.185 lookahead:0.043 depot:0.637",
+      "slot_4": "rank:5 ndist:1.21 cos:-0.28 dist:0.077 ctr:0.219 lookahead:0.058 depot:0.633",
+      "slot_5": "rank:3 ndist:0.89 cos:-0.81 dist:0.056 ctr:0.313 lookahead:0.050 depot:0.743",
+      "slot_6": "rank:8 ndist:1.57 cos:0.97 dist:0.100 ctr:0.244 lookahead:0.061 depot:0.725",
+      "slot_7": "rank:6 ndist:1.27 cos:0.45 dist:0.081 ctr:0.306 lookahead:0.062 depot:0.773"
+    }
+  }
+}
